@@ -9,7 +9,7 @@ from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
 from starlette.middleware.sessions import SessionMiddleware
 from auth_users import ensure_seed_teacher, get_teacher_by_email, verify_password
-from db import booking_details_for_slot, get_conn, init_db, sum_booked, teacher_booking_for_slot
+from db import get_conn, init_db, sum_booked, teacher_booking_for_slot
 from schedule_config import BUILDINGS, FLOORS, LAPTOPS_PER_FLOOR
 
 BASE_DIR = Path(__file__).resolve().parent
