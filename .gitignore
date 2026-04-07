@@ -1,0 +1,32 @@
+# Claude Code local settings
+.claude/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
