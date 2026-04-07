@@ -1,7 +1,6 @@
 /// <reference types="vite/client" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import process from 'process'
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -10,7 +9,8 @@ export default defineConfig({
     },
     proxy: {
       "/api": {
-        target: process.env.VITE_API_PROXY_TARGET ?? "http://localhost:8000",
+        ///target: process.env.VITE_API_PROXY_TARGET ?? "http://localhost:8000",
+        target: "http://localhost:8000",
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
